@@ -1,0 +1,53 @@
+.header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+
+  .header__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__item {
+    .logo {
+      width: 100%;
+      max-width: 61px;
+      object-fit: cover;
+    }
+    .burger {
+      &__btn {
+        background: transparent;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &-item {
+          position: absolute;
+          display: block;
+          width: 23px;
+          height: 1px;
+          background-color: rgba(64, 43, 31, 1);
+          &:nth-child(1) {
+            top: 11px;
+          }
+          &:nth-child(2) {
+            top: 20px;
+          }
+          &:nth-child(3) {
+            top: 28px;
+          }
+        }
+      }
+    }
+  }
+}
