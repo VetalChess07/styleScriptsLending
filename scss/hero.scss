@@ -1,12 +1,10 @@
 .hero {
   .hero__inner {
     width: 100%;
-    display: grid;
-    grid-template-columns: 580px 580px;
-    grid-auto-rows: minmax(100px, 1000px);
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-items: center;
-    grid-gap: 40px;
+    gap: 40px;
 
     .hero__item {
       height: 100%;
@@ -42,10 +40,6 @@
           width: 3px;
           height: 115px;
         }
-      }
-      .hero__item-text {
-        background-color: rgba(248, 246, 243, 1);
-        padding: 30px;
       }
     }
   }
