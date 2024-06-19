@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip Card Example</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+      .card {
+        width: 200px;
+        height: 300px;
+        perspective: 1000px;
+        margin: 20px;
+      }
+      .card__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      .card__front,
+      .card__back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+      }
+      .card__front {
+        background-color: #bbb;
+        color: black;
+      }
+      .card__back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+      }
+      .card.flip .card__inner {
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__front">
+          <button class="btn open-btn">open</button>
+        </div>
+        <div class="card__back">
+          321
+          <button class="btn close-btn">close</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card__inner">
+        <div class="card__front">
+          123
+          <button class="btn open-btn">open</button>
+        </div>
+        <div class="card__back">
+          321
+          <button class="btn close-btn">close</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach((card) => {
+          const openBtn = card.querySelector(".open-btn");
+          const closeBtn = card.querySelector(".close-btn");
+          console.log(openBtn, closeBtn);
+
+          openBtn.addEventListener("click", () => {
+            card.classList.add("flip");
+          });
+
+          closeBtn.addEventListener("click", () => {
+            card.classList.remove("flip");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

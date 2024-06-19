@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/hero.css" />
     <link rel="stylesheet" href="./css/universal.css" />
+    <link rel="stylesheet" href="./css/inside.css" />
   </head>
   <body>
     <header class="header">
@@ -86,20 +91,7 @@
             </p>
           </div>
           <div class="universal__item">
-            <div id="bookContainer">
-              <div class="page">
-                <div class="content">
-                  <h1>Page 1</h1>
-                  <p>This is the content of page 1.</p>
-                </div>
-              </div>
-              <div class="page">
-                <div class="content">
-                  <h1>Page 2</h1>
-                  <p>This is the content of page 2.</p>
-                </div>
-              </div>
-            </div>
+            <div id="bookContainer"></div>
             <ul class="universal__list">
               <h4 class="universal__list-title title">
                 Свидание с айтишником дешево:
@@ -114,9 +106,151 @@
           </div>
         </div>
       </section>
+      <section class="inside container">
+        <div class="inside__inner">
+          <div class="inside__item">
+            <h2 class="title">что внутри?</h2>
+            <p class="main-text paper inside__item-text">
+              5 блоков с готовыми образами и короткими комментариями от
+              стилистов. Также бесплатный подарок от StyleScripts.
+            </p>
+          </div>
+          <div class="swiper inside__item mySwiper">
+            <div class="box-arrow">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="swiper-wrapper">
+              <div class="swiper-slide inside__card">
+                <div class="inside__card-inner">
+                  <div class="card__front">
+                    <h3 class="card__front-title">1 / на все случаи жизни </h3>
+                    <button class="card__front-btn btn open-btn">open</button>
+                  </div>
+                  <div class="card__back">
+                    <p class="card__back-text">
+                      Так, а как быть девушкам восточных культур, которые хотят
+                      выглядеть модно и при этом не нарушать устоявшиеся
+                      традиции? Где им одеваться? Наш эксперт,
+                      специализирующийся по стайлингу мусульманок, подготовил 12
+                      стильных и практичных луков со строгим соблюдением всех
+                      устоев. Ко всем образам прилагается ссылка / адрес, где
+                      можно купить вещь. 
+                    </p>
+                    <button class="btn close-btn">Вернуться</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide inside__card">
+                <div class="inside__card-inner">
+                  <div class="card__front">
+                    <img
+                      class="card__front-img"
+                      src="./image/book_img2.png"
+                      alt="женщина"
+                    />
+                    <h3 class="card__front-title">1 / на все случаи жизни </h3>
+                    <button class="btn open-btn">open</button>
+                  </div>
+                  <div class="card__back">
+                    <p class="card__back-text">
+                      Так, а как быть девушкам восточных культур, которые хотят
+                      выглядеть модно и при этом не нарушать устоявшиеся
+                      традиции? Где им одеваться? Наш эксперт,
+                      специализирующийся по стайлингу мусульманок, подготовил 12
+                      стильных и практичных луков со строгим соблюдением всех
+                      устоев. Ко всем образам прилагается ссылка / адрес, где
+                      можно купить вещь. 
+                    </p>
+                    <button class="btn close-btn">Вернуться</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide inside__card">
+                <div class="inside__card-inner">
+                  <div class="card__front">
+                    <img
+                      class="card__front-img"
+                      src="./image/book_img2.png"
+                      alt="женщина"
+                    />
+                    <h3 class="card__front-title">1 / на все случаи жизни </h3>
+                    <button class="btn open-btn">open</button>
+                  </div>
+                  <div class="card__back">
+                    <p class="card__back-text">
+                      Так, а как быть девушкам восточных культур, которые хотят
+                      выглядеть модно и при этом не нарушать устоявшиеся
+                      традиции? Где им одеваться? Наш эксперт,
+                      специализирующийся по стайлингу мусульманок, подготовил 12
+                      стильных и практичных луков со строгим соблюдением всех
+                      устоев. Ко всем образам прилагается ссылка / адрес, где
+                      можно купить вещь. 
+                    </p>
+                    <button class="btn close-btn">Вернуться</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide inside__card">
+                <div class="inside__card-inner">
+                  <div class="card__front">
+                    <img
+                      class="card__front-img"
+                      src="./image/book_img2.png"
+                      alt="женщина"
+                    />
+                    <h3 class="card__front-title">1 / на все случаи жизни </h3>
+                    <button class="btn open-btn">open</button>
+                  </div>
+                  <div class="card__back">
+                    <p class="card__back-text">
+                      Так, а как быть девушкам восточных культур, которые хотят
+                      выглядеть модно и при этом не нарушать устоявшиеся
+                      традиции? Где им одеваться? Наш эксперт,
+                      специализирующийся по стайлингу мусульманок, подготовил 12
+                      стильных и практичных луков со строгим соблюдением всех
+                      устоев. Ко всем образам прилагается ссылка / адрес, где
+                      можно купить вещь. 
+                    </p>
+                    <button class="btn close-btn">Вернуться</button>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide inside__card">
+                <div class="inside__card-inner">
+                  <div class="card__front">
+                    <img
+                      class="card__front-img"
+                      src="./image/book_img2.png"
+                      alt="женщина"
+                    />
+                    <h3 class="card__front-title">1 / на все случаи жизни </h3>
+                    <button class="btn open-btn">open</button>
+                  </div>
+                  <div class="card__back">
+                    <p class="card__back-text">
+                      Так, а как быть девушкам восточных культур, которые хотят
+                      выглядеть модно и при этом не нарушать устоявшиеся
+                      традиции? Где им одеваться? Наш эксперт,
+                      специализирующийся по стайлингу мусульманок, подготовил 12
+                      стильных и практичных луков со строгим соблюдением всех
+                      устоев. Ко всем образам прилагается ссылка / адрес, где
+                      можно купить вещь. 
+                    </p>
+                    <button class="btn close-btn">Вернуться</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
     <script src="./scripts/books.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
