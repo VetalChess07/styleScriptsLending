@@ -1,0 +1,44 @@
+.gift {
+  margin: 130px 0 0 0;
+  width: 1200px auto;
+  background-color: #f8f6f3;
+  height: 823px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1%;
+}
+.gift_left {
+  position: relative;
+  width: 550px;
+  text-align: left;
+  margin: 48px 50px 48px 50px;
+}
+
+.gift_left-desc {
+  font-size: 24px;
+  color: #402b1f;
+  margin-top: 233px;
+  font-weight: 200;
+  font-family: "Onest";
+}
+.gift_left-arrow {
+  position: absolute;
+  bottom: 0;
+}
+.gift_wright {
+  width: 540px;
+  margin: 48px 50px 48px 0px;
+  position: relative;
+  background-color: rgb(201, 201, 198);
+  border-radius: 1%;
+}
+.gift_wright-button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 2%;
+  height: 61px;
+  border: 0px;
+  background-color: #664c43;
+  font-size: 24px;
+}
