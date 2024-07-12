@@ -13,11 +13,11 @@
 }
 .grid__item:first-child {
   padding: 0;
-  background-image: url("../images/arrow_carusel.svg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
   border: none;
+}
+.grid__item-arrow {
+  height: 20px;
+  flex-grow: 1;
 }
 .grid__item:nth-child(3),
 .grid__item:nth-child(5) {

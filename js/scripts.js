@@ -10,7 +10,7 @@ const logo = document.querySelector("#logo");
 const imagesLoader = document.querySelectorAll(".loader__img");
 let currentIndex = 0;
 
-const time = 2400;
+const time = 0;
 const step = 1;
 
 function animationLoaderImg() {
@@ -79,7 +79,7 @@ window.addEventListener("scroll", function () {
 function setTranslateYBurgerInner() {
   if (screenWidth <= 980) {
     const headerH = header.offsetHeight;
-    burgerInner.style.transform = `translateY(${headerH}px)`;
+    burgerInner.style.transform = `translateY(${headerH - 2}px)`;
   }
 }
 function removeTranslateYBurgerInner() {
@@ -94,12 +94,14 @@ burger.addEventListener("click", () => {
     burgerInner.classList.add("open");
     header.classList.add("scrolled");
     logo.classList.add("scrolled");
+
     // window.addEventListener("resize", function () {
     //   setTranslateYBurgerInner();
     // });
     setTranslateYBurgerInner();
   } else {
     removeTranslateYBurgerInner();
+
     burgerInner.classList.remove("open");
   }
 });

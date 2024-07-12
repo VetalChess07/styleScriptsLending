@@ -40,6 +40,10 @@
   align-items: center;
   justify-content: center;
 }
+.footer__box-item {
+  display: flex;
+  gap: 16px;
+}
 .footer__box-list:first-child {
   gap: 80px;
   padding: 36px 55px 68px 10px;
@@ -196,10 +200,7 @@
     gap: 35px;
     border: 1px solid var(--pink);
   }
-  .footer__box-item {
-    display: flex;
-    gap: 16px;
-  }
+
   .footer__list-item {
     align-items: center;
   }
