@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Onest-Light";
+  src: url("../fonts/Onest-Light.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Onest-Regular";
+  src: url("../fonts/Onest-Regular.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Onest-Medium";
+  src: url("../fonts/Onest-Medium.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mirra";
+  src: url("../fonts/Mirra.otf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GoodVibesPro";
+  src: url("../fonts/GoodVibesCyr.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bold";
+  src: url("../fonts/Onest-Bold.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Body-Grotesque";
+  src: url("../fonts/Body-Grotesque-Bold-trial.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}

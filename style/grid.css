@@ -1,0 +1,58 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+}
+.grid__item {
+  min-height: 373px;
+  position: relative;
+  padding: 48px 36px;
+  border: 1px solid var(--defColor);
+  border-radius: 8px;
+}
+.grid__item:first-child {
+  padding: 0;
+  background-image: url("../images/arrow_carusel.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  border: none;
+}
+.grid__item:nth-child(3),
+.grid__item:nth-child(5) {
+  border: none;
+
+  .grid__item-text {
+    color: var(--beige);
+  }
+}
+.grid__item-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 8px;
+}
+.grid__item-tile {
+  margin-bottom: 24px;
+}
+.grid__item-span {
+}
+@media (max-width: 780px) {
+  .grid {
+    margin-top: 60px;
+    -ms-grid-columns: minmax(90px, 1fr) 20px minmax(90px, 1fr);
+    grid-template-columns: repeat(2, minmax(90px, 1fr));
+    -ms-grid-rows: 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-rows: repeat(5, 168px);
+    gap: 8px;
+  }
+
+  .grid__item:first-child {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+}
