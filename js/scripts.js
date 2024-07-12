@@ -1,5 +1,6 @@
 const body = document.body;
 const loaderInner = document.querySelector(".loader__inner");
+
 const header = document.querySelector(".header");
 const burger__inner = document.querySelector(".burger__inner");
 const burger = document.querySelector("#burger");
@@ -7,11 +8,22 @@ const burgerInner = document.querySelector(".burger__inner");
 const screenWidth = window.innerWidth;
 const logo = document.querySelector("#logo");
 
+const navLinks = document.querySelectorAll(".burger__link");
+
 const imagesLoader = document.querySelectorAll(".loader__img");
 let currentIndex = 0;
 
-const time = 0;
+const time = 2500;
 const step = 1;
+
+navLinks.forEach((el) =>
+  el.addEventListener("click", (e) => {
+    console.log("ff");
+    burgerInner.classList.remove("open");
+    burgerInner.style.transform = "";
+    burger.classList.remove("active");
+  })
+);
 
 function animationLoaderImg() {
   const timer = setInterval(() => {
@@ -58,6 +70,11 @@ function loadData() {
   setTimeout(function () {
     hideLoader();
     stopAnimation(); // Останавливаем анимацию изображений
+    AOS.init({
+      once: true,
+      offset: 80,
+      duration: 500,
+    });
   }, time);
 }
 

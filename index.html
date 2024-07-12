@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
@@ -31,7 +31,7 @@
       </div>
       <p class="counter" data-target="100">0</p>
     </div>
-    <header class="header">
+    <header data-aos="fade-down" class="header">
       <div class="header__inner">
         <nav class="header__nav">
           <ul class="header__nav-inner">
@@ -72,39 +72,43 @@
         <h3 class="burger__inner-title">Меню</h3>
         <ul class="burger__inner-list">
           <li class="burger__inner-li">
-            <a class="burger__link" href="">О чем</a>
+            <a class="burger__link" href="#hero">О чем</a>
           </li>
 
           <li class="burger__inner-li">
-            <a class="burger__link" href="">Что внутри</a>
+            <a class="burger__link" href="#inside">Что внутри</a>
           </li>
 
           <li class="burger__inner-li">
-            <a class="burger__link" href="">Для кого</a>
+            <a class="burger__link" href="#universal">Для кого</a>
           </li>
 
           <li class="burger__inner-li">
-            <a class="burger__link" href="">Тарифы</a>
+            <a class="burger__link" href="#price">Тарифы</a>
           </li>
 
           <li class="burger__inner-li">
-            <a class="burger__link" href="">FAQ</a>
+            <a class="burger__link" href="#faq">FAQ</a>
           </li>
 
           <li class="burger__inner-li">
-            <a class="burger__link" href="">Контакты</a>
+            <a class="burger__link" href="#footer">Контакты</a>
           </li>
         </ul>
       </div>
     </div>
-    <main>
-      <section class="hero">
+    <main class="main">
+      <section id="hero" class="hero">
         <div class="hero__inner">
-          <div class="hero__item">
+          <div data-aos="fade-right" class="hero__item">
             <img src="./images/hero__img1.png" alt="" class="hero__item-img" />
           </div>
-          <div class="hero__item">
-            <img src="./images/hero__img2.png" alt="" class="hero__item-img" />
+          <div data-aos="fade-left" class="hero__item">
+            <img
+              src="./images/hero__img2.png"
+              alt=""
+              class="hero__item-img hero__item-img-radius"
+            />
           </div>
           <div class="hero__item-text">
             <span class="hero__text-span">привет!</span>
@@ -123,9 +127,9 @@
           </div>
         </div>
       </section>
-      <section class="universal">
+      <section id="universal" class="universal">
         <div class="universal__inner">
-          <div class="universal__item">
+          <div data-aos="fade-right" class="universal__item">
             <h2 class="universal__item-title">
               Универсальный гайд
               <span class="universal__item-span">
@@ -171,7 +175,7 @@
               />
             </div>
           </div>
-          <div class="universal__item">
+          <div data-aos="fade-left" class="universal__item">
             <img
               loading="lazy"
               src="./images/Журнал фото.png"
@@ -188,20 +192,24 @@
           </div>
         </div>
       </section>
-      <section class="inside">
+      <section id="inside" class="inside">
         <div class="inside__inner">
           <div class="inside__item">
             <div class="inside__item-box">
-              <h2 class="inside__item-title">что внутри?</h2>
-              <p class="inside__item-text">
+              <h2 data-aos="fade-down" class="inside__item-title">
+                что внутри?
+              </h2>
+              <p data-aos="fade-right" class="inside__item-text">
                 5 блоков с готовыми образами и короткими комментариями от
                 стилистов. Также бесплатный подарок от StyleScripts.
               </p>
             </div>
-            <span class="inside__item-span">смело листайте влево</span>
+            <span data-aos="fade-right" class="inside__item-span"
+              >смело листайте влево</span
+            >
           </div>
 
-          <div class="inside__item inside__item-swiper">
+          <div data-aos="fade-left" class="inside__item inside__item-swiper">
             <div class="inside__item-arrow-box">
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
@@ -309,7 +317,7 @@
           </div>
         </div>
       </section>
-      <section class="carousel">
+      <section id="carousel" class="carousel">
         <div class="carousel__box">
           <img
             loading="lazy"
@@ -318,8 +326,10 @@
             alt=""
           />
           <div class="carousel__box-item">
-            <h2 class="carousel__box-title">пару образов от нас</h2>
-            <span class="carousel__box-text"
+            <h2 data-aos="fade-right" class="carousel__box-title">
+              пару образов от нас
+            </h2>
+            <span data-aos="fade-left" class="carousel__box-text"
               >покажем немного закулисья
               <img
                 loading="lazy"
@@ -405,7 +415,7 @@
         </div>
       </section>
       <section class="grid">
-        <div class="grid__item">
+        <div data-aos="fade-down-right" class="grid__item">
           <h2 class="grid__item-tile">Наш гайд создан для всех</h2>
           <span class="grid__item-span">для тебя и твоей подруги</span>
           <img class="grid__item-arrow" src="./images/arrow_grid.svg" alt="" />
@@ -438,18 +448,18 @@
           </p>
         </div>
       </section>
-      <section class="price">
+      <section id="price" class="price">
         <div class="price__inner">
           <div class="price__item">
-            <h2 class="price__item-box-title">Тарифы</h2>
-            <p class="price__item-box-text">
+            <h2 data-aos="fade-down" class="price__item-box-title">Тарифы</h2>
+            <p data-aos="fade-right" class="price__item-box-text">
               Для удобства ты можешь купить весь гайд сразу или же взять только
               блок, который тебе интересен.
             </p>
 
             <span class="price__item-box-span">девочки, гуляем?</span>
           </div>
-          <div class="price__item">
+          <div data-aos="fade-left" class="price__item">
             <div class="price__card">
               <div class="price__card-box">
                 <h3 class="price__card-title">01 / Тариф “Суперчеткая”</h3>
@@ -499,7 +509,7 @@
       </section>
       <section class="prize">
         <div class="prize__inner">
-          <div class="prize__item">
+          <div data-aos="fade-down" class="prize__item">
             <h2 class="prize__item-title">Подарок для тебя</h2>
             <p class="prize__item-text">
               Ссылка на закрытый модный Telegram-канал, где наши стилисты каждые
@@ -509,7 +519,7 @@
             </p>
             <span class="prize__item-span">скорее забирай и присоединяйся</span>
           </div>
-          <div class="prize__item">
+          <div data-aos="fade-up" class="prize__item">
             <img
               class="prize__item-img"
               loading="lazy"
@@ -520,9 +530,9 @@
           </div>
         </div>
       </section>
-      <section class="faq">
+      <section id="faq" class="faq">
         <div class="faq__inner">
-          <div class="faq__item">
+          <div data-aos="fade-right" class="faq__item">
             <img
               loading="lazy"
               class="faq__item-img"
@@ -532,7 +542,7 @@
           </div>
           <div class="faq__item">
             <h2 class="faq__item-title">FAQ</h2>
-            <ul class="accordion">
+            <ul data-aos="fade-left" class="accordion">
               <li class="accordion-item">
                 <div class="accordion-header">
                   <h3 class="accordion-header-title">
@@ -579,14 +589,16 @@
                 </p>
               </li>
             </ul>
-            <span class="faq__item-span">рады помочь!</span>
+            <span data-aos="fade-left" class="faq__item-span"
+              >рады помочь!</span
+            >
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer__inner">
-        <div class="footer__item">
+        <div data-aos="fade-down" class="footer__item">
           <img
             loading="lazy"
             class="footer__item-logo"
@@ -596,7 +608,7 @@
         </div>
         <div class="footer__item">
           <div class="footer__box">
-            <ul class="footer__box-list">
+            <ul data-aos="fade-right" class="footer__box-list">
               <li class="footer__list-item">
                 <p class="footer__box-list-text">
                   Если вы не нашли ответа на свой вопрос, то можете задать
@@ -633,7 +645,7 @@
                 </form>
               </li>
             </ul>
-            <div class="footer__box-list">
+            <div data-aos="fade-right" class="footer__box-list">
               <ul class="footer__box-list-item">
                 <a class="footer__box-list-item-link">Главная</a>
                 <a class="footer__box-list-item-link">Чего ждать от гайда?</a>
@@ -669,7 +681,7 @@
       </div>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/scripts.js"></script>
   </body>
 </html>
