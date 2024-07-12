@@ -84,7 +84,6 @@ function setTranslateYBurgerInner() {
 }
 function removeTranslateYBurgerInner() {
   if (burgerInner.style.transform) {
-    console.log("ff");
     burgerInner.style.transform = "";
   }
 }
@@ -93,7 +92,8 @@ burger.addEventListener("click", () => {
   burger.classList.toggle("active");
   if (burger.classList.contains("active")) {
     burgerInner.classList.add("open");
-    console.log(burger.classList);
+    header.classList.add("scrolled");
+    logo.classList.add("scrolled");
     // window.addEventListener("resize", function () {
     //   setTranslateYBurgerInner();
     // });

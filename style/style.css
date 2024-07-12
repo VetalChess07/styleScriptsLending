@@ -707,7 +707,7 @@ section {
     width: 100%;
   }
   .hero__item-img {
-    height: 100dvh;
+    height: 100%;
     max-width: none;
     border-radius: 0;
     -o-object-position: right;
@@ -1149,7 +1149,6 @@ section {
   }
   .universal__item-box-img {
     max-width: 75px;
-    height: 60px;
   }
   .universal__item-list-item {
     font-size: 18px;
