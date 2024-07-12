@@ -108,7 +108,9 @@ burger.addEventListener("click", () => {
 
 const swiper = new Swiper(".inside__item-swiper", {
   spaceBetween: 40,
-
+  keyboard: {
+    enabled: true, // Включаем управление с клавиатуры
+  },
   speed: 500,
   breakpoints: {
     1080: { slidesPerView: 2.8 },
