@@ -179,6 +179,7 @@
     height: 162px;
     max-width: 375px;
   }
+
   .footer__box {
     flex-direction: column;
   }
@@ -195,7 +196,12 @@
     gap: 35px;
     border: 1px solid var(--pink);
   }
-  .footer__box-list-item {
+  .footer__box-item {
+    display: flex;
+    gap: 16px;
+  }
+  .footer__list-item {
+    align-items: center;
   }
   .footer__box-list-item:last-child {
     flex-direction: row-reverse;
