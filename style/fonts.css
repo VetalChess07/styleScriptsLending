@@ -17,6 +17,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Onest-bold";
+  src: url("../fonts/Onest-Bold.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Mirra";
   src: url("../fonts/Mirra.otf") format("woff2");
   font-weight: normal;

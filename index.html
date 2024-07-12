@@ -19,9 +19,32 @@
     <link rel="stylesheet" href="./style/inside.css" />
     <link rel="stylesheet" href="./style/carusel.css" />
     <link rel="stylesheet" href="./style/grid.css" />
+    <link rel="stylesheet" href="./style/price.css" />
+    <link rel="stylesheet" href="./style/prize.css" />
+    <link rel="stylesheet" href="./style/faq.css" />
+    <link rel="stylesheet" href="./style/footer.css" />
   </head>
   <body>
-    <header class="header beige-bg">
+    <div class="loader__inner">
+      <div class="slideshow">
+        <div class="loader">
+          <div class="slide loader__img active loader__img-1">
+            <img src="./images/loader1.svg" alt="Image 1" />
+          </div>
+          <div class="slide loader__img loader__img-2">
+            <img src="./images/loader2.svg" alt="Image 2" />
+          </div>
+          <div class="slide loader__img loader__img-3">
+            <img src="./images/loader3.svg" alt="Image 3" />
+          </div>
+          <div class="slide loader__img loader__img-4">
+            <img src="./images/loader4.svg" alt="Image 4" />
+          </div>
+        </div>
+      </div>
+      <p class="counter" data-target="100">0</p>
+    </div>
+    <header class="header">
       <div class="header__inner">
         <nav class="header__nav">
           <ul class="header__nav-inner">
@@ -393,7 +416,225 @@
           </p>
         </div>
       </section>
+      <section class="price">
+        <div class="price__inner">
+          <div class="price__item">
+            <h2 class="price__item-box-title">Тарифы</h2>
+            <p class="price__item-box-text">
+              Для удобства ты можешь купить весь гайд сразу или же взять только
+              блок, который тебе интересен.
+            </p>
+
+            <span class="price__item-box-span">девочки, гуляем?</span>
+          </div>
+          <div class="price__item">
+            <div class="price__card">
+              <div class="price__card-box">
+                <h3 class="price__card-title">01 / Тариф “Суперчеткая”</h3>
+                <ul class="price__card-list">
+                  <li class="price__card-list-item">
+                    3 любых блока на выбор (за исключением «На все случаи
+                    жизни») 
+                  </li>
+                  <li class="price__card-list-item">
+                    3 любых блока на выбор (за исключением «На все случаи
+                    жизни») 
+                  </li>
+                </ul>
+              </div>
+              <a class="price__card-btn" href="">1499 руб.</a>
+            </div>
+            <div class="price__card">
+              <div class="price__card-box">
+                <h3 class="price__card-title">01 / Тариф “Суперчеткая”</h3>
+                <ul class="price__card-list">
+                  <li class="price__card-list-item">
+                    3 любых блока на выбор (за исключением «На все случаи
+                    жизни») 
+                  </li>
+                  <li class="price__card-list-item">
+                    3 любых блока на выбор (за исключением «На все случаи
+                    жизни») 
+                  </li>
+                </ul>
+              </div>
+              <a class="price__card-btn" href="">1499 руб.</a>
+            </div>
+            <div class="price__card">
+              <div class="price__card-box">
+                <h3 class="price__card-title">01 / Тариф “Суперчеткая”</h3>
+                <ul class="price__card-list">
+                  <li class="price__card-list-item">
+                    3 любых блока на выбор (за исключением «На все случаи
+                    жизни») 
+                  </li>
+                </ul>
+              </div>
+              <a class="price__card-btn" href="">1499 руб.</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="prize">
+        <div class="prize__inner">
+          <div class="prize__item">
+            <h2 class="prize__item-title">Подарок для тебя</h2>
+            <p class="prize__item-text">
+              Ссылка на закрытый модный Telegram-канал, где наши стилисты каждые
+              3 недели разбирают образы подписчиков, выкладывают полезную
+              информацию про тренды и моду, отвечают на самые популярные вопросы
+              про стиль.
+            </p>
+            <span class="prize__item-span">скорее забирай и присоединяйся</span>
+          </div>
+          <div class="prize__item">
+            <img class="prize__item-img" src="./images/hero__img2.png" alt="" />
+            <a class="prize__item-link" href="">Вступить</a>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="faq__inner">
+          <div class="faq__item">
+            <img class="faq__item-img" src="./images/faq.png" alt="" />
+          </div>
+          <div class="faq__item">
+            <h2 class="faq__item-title">FAQ</h2>
+            <ul class="accordion">
+              <li class="accordion-item">
+                <div class="accordion-header">
+                  <h3 class="accordion-header-title">
+                    Каждый из нас понимает очевидную вещь: базовый вектор
+                    развития?
+                  </h3>
+
+                  <span class="accordion-icon"></span>
+                </div>
+                <p class="accordion-content">
+                  Также как повышение уровня гражданского сознания предоставляет
+                  широкие возможности для анализа существующих паттернов
+                  поведения.
+                </p>
+              </li>
+              <li class="accordion-item">
+                <div class="accordion-header">
+                  <h3 class="accordion-header-title">
+                    Каждый из нас понимает очевидную вещь: базовый вектор
+                    развития?
+                  </h3>
+
+                  <span class="accordion-icon"></span>
+                </div>
+                <p class="accordion-content">
+                  Также как повышение уровня гражданского сознания предоставляет
+                  широкие возможности для анализа существующих паттернов
+                  поведения.
+                </p>
+              </li>
+              <li class="accordion-item">
+                <div class="accordion-header">
+                  <h3 class="accordion-header-title">
+                    Каждый из нас понимает очевидную вещь: базовый вектор
+                    развития?
+                  </h3>
+
+                  <span class="accordion-icon"></span>
+                </div>
+                <p class="accordion-content">
+                  Также как повышение уровня гражданского сознания предоставляет
+                  широкие возможности для анализа существующих паттернов
+                  поведения.
+                </p>
+              </li>
+            </ul>
+            <span class="faq__item-span">рады помочь!</span>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__item">
+          <img
+            class="footer__item-logo"
+            src="./images/logo_footer.svg"
+            alt=""
+          />
+        </div>
+        <div class="footer__item">
+          <div class="footer__box">
+            <ul class="footer__box-list">
+              <li class="footer__list-item">
+                <p class="footer__box-list-text">
+                  Если вы не нашли ответа на свой вопрос, то можете задать
+                  нам его напрямую.
+                </p>
+                <div class="footer__box-item">
+                  <a href="" class="footer__box-list-link">
+                    <img
+                      class="footer__box-list-img"
+                      src="./images/tg.svg"
+                      alt="tg"
+                    />
+                  </a>
+                  <a href="" class="footer__box-list-link">
+                    <img
+                      class="footer__box-list-img"
+                      src="./images/email.svg"
+                      alt="tg"
+                    />
+                  </a>
+                </div>
+              </li>
+              <li class="footer__list-item">
+                <p class="footer__box-list-text">
+                  Или оставьте свой E-mail, мы вам обязательно напишем.
+                </p>
+                <form class="footer__form" action="">
+                  <input
+                    placeholder="E-mail"
+                    class="footer__form-input"
+                    type="enail"
+                  />
+                  <input class="footer__form-btn" type="submit" />
+                </form>
+              </li>
+            </ul>
+            <div class="footer__box-list">
+              <ul class="footer__box-list-item">
+                <a class="footer__box-list-item-link">Главная</a>
+                <a class="footer__box-list-item-link">Чего ждать от гайда?</a>
+                <a class="footer__box-list-item-link">Для кого?</a>
+              </ul>
+              <ul class="footer__box-list-item">
+                <a class="footer__box-list-item-link">Тарифы</a>
+                <a class="footer__box-list-item-link">FAQ</a>
+                <a class="footer__box-list-item-link">Контакты</a>
+              </ul>
+              <ul class="footer__box-list-item">
+                <a class="footer__box-list-item-link">Telegram</a>
+                <a class="footer__box-list-item-link">Whatsapp</a>
+              </ul>
+              <ul class="footer__box-list-item">
+                <span class="footer__box-list-item-span"
+                  >начни свой стиль со Stylescripts</span
+                >
+                <a class="footer__box-list-item-text"
+                  >ИП Толчева Виктория Андреевна <br />
+                  ИНН 4947282649</a
+                >
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="privacy__policy">
+      <div class="privacy__policy-inner">
+        <p class="copyright">© 2024г. Все права защищены</p>
+        <a href="" class="privacy__policy-link">Политика конфиденциальности</a>
+      </div>
+    </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script src="./js/scripts.js"></script>

@@ -72,7 +72,8 @@
   .hero__item-img {
     height: 100dvh;
     max-width: none;
-    border-radius: 10px;
+    border-radius: 0;
+    object-position: right;
   }
   .hero__item-text {
     padding: 10px;

@@ -1,7 +1,6 @@
 .carousel {
   width: 100%;
   height: 100%;
-  margin-top: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,9 +83,7 @@
 }
 .custom-swiper-slide img {
   max-width: 300px;
-  max-height: 449px;
   width: auto;
-  image-rendering: crisp-edges;
 }
 .carousel__box {
   width: 100%;
@@ -125,6 +122,9 @@
 }
 
 @media (max-width: 780px) {
+  .carousel__inner {
+    gap: 20px;
+  }
   .carousel__scotch-img {
     max-width: 143px;
     height: 79px;
@@ -154,5 +154,14 @@
   }
   .carousel__inner {
     padding: 56px 0 24px 0;
+  }
+  .carousel__inner-btn {
+    font-size: 14px;
+    padding: 16px 30px;
+  }
+  .custom-swiper-slide img {
+    max-width: 226px;
+    max-height: 372px;
+    width: 100%;
   }
 }

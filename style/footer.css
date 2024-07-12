@@ -1,0 +1,225 @@
+.footer {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid var(--pink);
+}
+.footer__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.footer__item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__item:first-child {
+  padding: 36px;
+}
+.footer__item:last-child {
+  border-top: 1px solid var(--pink);
+  border-bottom: 1px solid var(--pink);
+}
+.footer__item-logo {
+  height: 293px;
+  max-width: 645px;
+}
+.footer__box {
+  width: 100%;
+  max-width: 1680px;
+  display: flex;
+}
+.footer__box-list {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__box-list:first-child {
+  gap: 80px;
+  padding: 36px 55px 68px 10px;
+  border-right: 1px solid var(--pink);
+}
+.footer__box-list:last-child {
+  gap: 60px;
+  padding: 36px 10px 68px 55px;
+}
+.footer__list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  gap: 16px;
+}
+
+.footer__form {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+.footer__form-input {
+  width: 100%;
+  border: 1px solid rgba(179, 187, 203, 1);
+  border-radius: 10px;
+  padding: 16px 20px;
+  outline: none;
+  transition: all 0.5s;
+  color: rgba(179, 187, 203, 1);
+}
+.footer__form-input::placeholder {
+  color: rgba(179, 187, 203, 1);
+}
+.footer__form-input:focus {
+  color: var(--pink);
+  border: 1px solid var(--pink);
+}
+.footer__form-btn {
+  background: url("../images/icon-form.svg");
+  background-size: contain; /* Размер фона */
+  background-repeat: no-repeat; /* Запрет на повторение */
+  background-position: center; /* Позиция изображения */
+  border: 1px solid var(--pink); /* Убираем рамку */
+  width: 66px; /* Ширина кнопки */
+  height: 56px; /* Высота кнопки */
+  cursor: pointer; /* Курсор указателя при наведении */
+  text-indent: -9999px;
+  background-size: 15px 15px;
+  border-radius: 10px;
+  outline: none;
+}
+
+.footer__box-list-text {
+  font-size: 16px;
+  line-height: 22.4px;
+}
+.footer__box-list-link {
+}
+.footer__box-list-img {
+  width: 40px;
+}
+.footer__box-list-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+.footer__box-list-item-link {
+  line-height: 17.85px;
+  font-size: 14px;
+}
+.footer__box-list-item-span {
+  line-height: 18px;
+  font-size: 18px;
+}
+.footer__box-list-item-text {
+  line-height: 19.6px;
+  font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .footer__box-list {
+    flex-wrap: wrap;
+  }
+  .footer__box-list-item {
+    height: auto;
+  }
+  .footer__box-list:first-child,
+  .footer__box-list:last-child {
+    padding: 24px 10px;
+    justify-content: start;
+  }
+  .footer__item:first-child {
+    padding: 26px;
+  }
+  .footer__item-logo {
+    height: 203px;
+    max-width: 450px;
+  }
+}
+
+.privacy__policy {
+  padding: 6px 10px 40px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.privacy__policy-inner {
+  width: 100%;
+  max-width: 1680px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.copyright {
+  line-height: 16px;
+  font-size: 14px;
+}
+.privacy__policy-link {
+  line-height: 16px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+@media (max-width: 580px) {
+  .footer__inner {
+    gap: 8px;
+  }
+  .footer__item:first-child {
+    padding: 8px;
+  }
+  .footer__item-logo {
+    height: 162px;
+    max-width: 375px;
+  }
+  .footer__box {
+    flex-direction: column;
+  }
+  .footer__item:last-child {
+    border-bottom: none;
+  }
+
+  .footer__box-list:first-child {
+    width: 100%;
+    gap: 30px;
+  }
+  .footer__box-list:last-child {
+    width: 100%;
+    gap: 35px;
+    border: 1px solid var(--pink);
+  }
+  .footer__box-list-item {
+  }
+  .footer__box-list-item:last-child {
+    flex-direction: row-reverse;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__box-list-item-text {
+    font-size: 8px;
+    line-height: 11.2px;
+    height: auto;
+  }
+  .footer__box-list-item-span {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .copyright {
+    line-height: 8px;
+    font-size: 8px;
+  }
+  .privacy__policy-link {
+    line-height: 8px;
+    font-size: 8px;
+  }
+}
