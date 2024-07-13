@@ -460,7 +460,7 @@ section {
   }
   .header {
     background: transparent;
-    padding: 8px 0;
+    padding: 8px 10px;
   }
   .header__nav {
     display: none;
@@ -755,10 +755,6 @@ section {
     margin-top: 8px;
   }
   .hero__text-icon {
-    -webkit-filter: brightness(0) saturate(100%) invert(81%) sepia(64%)
-      saturate(1335%) hue-rotate(292deg) brightness(92%) contrast(88%);
-    filter: brightness(0) saturate(100%) invert(81%) sepia(64%) saturate(1335%)
-      hue-rotate(292deg) brightness(92%) contrast(88%);
     width: 10px;
     height: 36px;
     -o-object-fit: contain;
