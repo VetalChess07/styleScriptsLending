@@ -1436,6 +1436,7 @@ section {
   }
   .inside__item-span {
     text-align: left;
+    line-height: 35px;
   }
   .inside__item > .inside__item-arrow-box {
     gap: 8px;
@@ -1456,7 +1457,7 @@ section {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    gap: 16px;
+    gap: 2px;
   }
 }
 
