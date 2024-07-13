@@ -901,18 +901,15 @@ section {
     padding: 16px;
   }
   .grid__item:first-child {
-    flex-direction: row;
     padding: 0 0 28px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 24px;
+    gap: 5px;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+
     background: none;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
@@ -922,6 +919,7 @@ section {
     grid-row: 1/2;
   }
   .grid__item-tile {
+    width: 70%;
     margin-bottom: 0px;
   }
   .grid__item:nth-child(2) {
@@ -1661,8 +1659,6 @@ section {
   }
 }
 
-.price {
-}
 .price__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2255,9 +2251,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -2356,9 +2350,7 @@ section {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+
   gap: 16px;
 }
 .footer__box-list-item-link {
@@ -2372,6 +2364,7 @@ section {
 .footer__box-list-item-text {
   line-height: 19.6px;
   font-size: 14px;
+  color: #8f8d8d;
 }
 
 @media (max-width: 1200px) {
@@ -2384,7 +2377,7 @@ section {
   }
   .footer__box-list:first-child,
   .footer__box-list:last-child {
-    padding: 24px 10px;
+    padding: 24px 20px;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start;
@@ -2428,11 +2421,14 @@ section {
 .copyright {
   line-height: 16px;
   font-size: 14px;
+  color: #8f8d8d;
 }
 .privacy__policy-link {
   line-height: 16px;
   font-size: 14px;
   text-decoration: underline;
+  font-family: "Onest-Light";
+  color: #8f8d8d;
 }
 
 @media (max-width: 580px) {
@@ -2464,7 +2460,7 @@ section {
   .footer__box-list:last-child {
     width: 100%;
     gap: 35px;
-    border: 1px solid var(--pink);
+    border-bottom: 1px solid #ebebeb;
   }
   .footer__box-item {
     display: -webkit-box;
