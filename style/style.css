@@ -204,7 +204,7 @@ main {
 section {
   width: 100%;
   max-width: 1680px;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 @media (max-width: 980px) {
@@ -1922,7 +1922,7 @@ section {
   margin: 15px 0 65px 0;
 }
 .prize__item-span {
-  padding: 15px;
+  padding-bottom: 15px;
   background-image: url(../images/arrow_carusel.svg);
   background-repeat: no-repeat;
   background-position: bottom;
