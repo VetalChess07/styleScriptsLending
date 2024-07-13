@@ -5,6 +5,7 @@ const html = document.documentElement;
 
 const header = document.querySelector(".header");
 const burger__inner = document.querySelector(".burger__inner");
+const burgerLine = document.querySelectorAll(".burger-line");
 const burger = document.querySelector("#burger");
 const burgerInner = document.querySelector(".burger__inner");
 const screenWidth = window.innerWidth;
@@ -19,7 +20,7 @@ gridText.forEach((el) => (el.style.color = "rgba(253, 252, 249, 1)"));
 const imagesLoader = document.querySelectorAll(".loader__img");
 let currentIndex = 0;
 
-const time = 2500;
+const time = 0;
 const step = 1;
 
 navLinks.forEach((el) =>
@@ -90,13 +91,29 @@ if (body.children.length < 10) {
   loadData();
 }
 
+if (screenWidth <= 980) {
+  logo.src = "./images/logo-mobile.png";
+  burgerLine.forEach(
+    (el) => (el.style.backgroundColor = "rgba(255, 255, 255, 1)")
+  );
+}
+
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 0) {
-    header.classList.add("scrolled");
-    logo.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-    logo.classList.remove("scrolled");
+  if (screenWidth <= 980) {
+    console.log("ff");
+    if (window.scrollY > 0) {
+      header.classList.add("scrolled");
+      logo.src = "./images/logo.png";
+      burgerLine.forEach(
+        (el) => (el.style.backgroundColor = "rgba(217, 140, 161, 1)")
+      );
+    } else {
+      header.classList.remove("scrolled");
+      logo.src = "./images/logo-mobile.png";
+      burgerLine.forEach(
+        (el) => (el.style.backgroundColor = "rgba(255, 255, 255, 1)")
+      );
+    }
   }
 });
 
@@ -119,6 +136,11 @@ burger.addEventListener("click", () => {
     header.classList.add("scrolled");
     logo.classList.add("scrolled");
     html.style.overflow = "hidden";
+
+    burgerLine.forEach(
+      (el) => (el.style.backgroundColor = "rgba(217, 140, 161, 1)")
+    );
+    logo.src = "./images/logo.png";
     // window.addEventListener("resize", function () {
     //   setTranslateYBurgerInner();
     // });

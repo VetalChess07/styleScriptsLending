@@ -446,15 +446,8 @@ section {
 @media (max-width: 980px) {
   .logo {
     height: 61px;
-    -webkit-filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
-      saturate(7453%) hue-rotate(95deg) brightness(114%) contrast(103%);
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7453%)
-      hue-rotate(95deg) brightness(114%) contrast(103%);
   }
-  .logo.scrolled {
-    -webkit-filter: none;
-    filter: none;
-  }
+
   .header.scrolled {
     background: var(--beige);
   }
