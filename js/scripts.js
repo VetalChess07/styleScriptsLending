@@ -1,6 +1,8 @@
 const body = document.body;
 const loaderInner = document.querySelector(".loader__inner");
 
+const html = document.documentElement;
+
 const header = document.querySelector(".header");
 const burger__inner = document.querySelector(".burger__inner");
 const burger = document.querySelector("#burger");
@@ -9,6 +11,10 @@ const screenWidth = window.innerWidth;
 const logo = document.querySelector("#logo");
 
 const navLinks = document.querySelectorAll(".burger__link");
+
+const gridText = document.querySelectorAll(".gridText");
+
+gridText.forEach((el) => (el.style.color = "rgba(253, 252, 249, 1)"));
 
 const imagesLoader = document.querySelectorAll(".loader__img");
 let currentIndex = 0;
@@ -22,6 +28,7 @@ navLinks.forEach((el) =>
     burgerInner.classList.remove("open");
     burgerInner.style.transform = "";
     burger.classList.remove("active");
+    html.style.overflow = "";
   })
 );
 
@@ -111,14 +118,14 @@ burger.addEventListener("click", () => {
     burgerInner.classList.add("open");
     header.classList.add("scrolled");
     logo.classList.add("scrolled");
-
+    html.style.overflow = "hidden";
     // window.addEventListener("resize", function () {
     //   setTranslateYBurgerInner();
     // });
     setTranslateYBurgerInner();
   } else {
     removeTranslateYBurgerInner();
-
+    html.style.overflow = "";
     burgerInner.classList.remove("open");
   }
 });
