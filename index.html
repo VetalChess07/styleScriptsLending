@@ -1,691 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./style/style.css" />
-  </head>
-  <body>
-    <div class="loader__inner">
-      <div class="slideshow">
-        <div class="loader">
-          <div class="slide loader__img active loader__img-1">
-            <img src="./images/loader1.svg" alt="Image 1" />
-          </div>
-          <div class="slide loader__img loader__img-2">
-            <img src="./images/loader2.svg" alt="Image 2" />
-          </div>
-          <div class="slide loader__img loader__img-3">
-            <img src="./images/loader3.svg" alt="Image 3" />
-          </div>
-          <div class="slide loader__img loader__img-4">
-            <img src="./images/loader4.svg" alt="Image 4" />
-          </div>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <nav class="header__items">
+                    <div class="header__item">
+                        <a class="header__item-link" href="#main">Выбрать квартиру</a>
+                    </div>
+                    <div class="header__item">
+                        <a class="header__item-link" href="#gallery">О комплексе</a>
+                    </div>
+                </nav>
+                <div class="header__logo">
+                    <img class="header__logo-img" src="./images/logo.png" alt="">
+                </div>
+                <nav class="header__items">
+                    <div class="header__item">
+                        <a class="header__item-link" href="#buy">Как купить</a>
+                    </div>
+                    <div class="header__item">
+                        <a class="header__item-link" href="#contacts">Контакты</a>
+                    </div>
+                </nav>
+                <div  class="header__menu">
+                    <img src="./images/burger.svg" alt="">
+                </div>
+            </div>
         </div>
-      </div>
-      <p class="counter" data-target="100">0</p>
-    </div>
-    <header data-aos="fade-down" class="header">
-      <div class="header__inner">
-        <nav class="header__nav">
-          <ul class="header__nav-inner">
-            <li class="nav__item">
-              <a class="nav__item-link" href="">Что внутри</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__item-link" href="">для кого</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__item-link" href="">о чем</a>
-            </li>
-          </ul>
-        </nav>
-        <a class="header__logo" href="">
-          <img class="logo" id="logo" src="./images/logo.png" alt="logo" />
-        </a>
-        <nav class="header__nav">
-          <ul class="header__nav-inner">
-            <li class="nav__item">
-              <a class="nav__item-link" href="">тарифы</a>
-            </li>
-            <li class="nav__item"><a class="nav__item-link" href="">faq</a></li>
-            <li class="nav__item">
-              <a class="nav__item-link" href="">контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <button id="burger" class="burger">
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-        </button>
-      </div>
     </header>
-    <div class="burger__inner">
-      <div class="burger__item">
-        <h3 class="burger__inner-title">Меню</h3>
-        <ul class="burger__inner-list">
-          <li class="burger__inner-li">
-            <a class="burger__link" href="#hero">О чем</a>
-          </li>
+    <!-- END header -->
 
-          <li class="burger__inner-li">
-            <a class="burger__link" href="#inside">Что внутри</a>
-          </li>
+    <!-- mobile-menu -->
+    <aside>
+        <nav class="mobile-menu">
+            <div class="container">
+                <div class="mobile-menu__header">
+                    <img class="mobile-menu__logo" src="./images/logodark.png" alt="">
+                    <div class="mobile-menu__close">
+                        <svg role="img" width="30" height="30">
+                            <use xlink:href="svg/symbol/svg-symbols.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="mobile-menu__body">
+                    <nav class="mobile-menu__items">
+                        <div class="mobile-menu__item">
+                            <a class="mobile-menu__item-link" href="#main">Выбрать квартиру</a>
+                        </div>
+                        <div class="mobile-menu__item">
+                            <a class="mobile-menu__item-link" href="#gallery">О комплексе</a>
+                        </div>
+                        <div class="mobile-menu__item">
+                            <a class="mobile-menu__item-link" href="#buy">Как купить</a>
+                        </div>
+                        <div class="mobile-menu__item">
+                            <a class="mobile-menu__item-link" href="#contacts">Контакты</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </nav>
+    </aside>
+    <!-- mobile-menu end -->
 
-          <li class="burger__inner-li">
-            <a class="burger__link" href="#universal">Для кого</a>
-          </li>
-
-          <li class="burger__inner-li">
-            <a class="burger__link" href="#price">Тарифы</a>
-          </li>
-
-          <li class="burger__inner-li">
-            <a class="burger__link" href="#faq">FAQ</a>
-          </li>
-
-          <li class="burger__inner-li">
-            <a class="burger__link" href="#footer">Контакты</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <!-- main -->
     <main class="main">
-      <section id="hero" class="hero">
-        <div class="hero__inner">
-          <div data-aos="fade-right" class="hero__item">
-            <img
-              src="./images/hero__img1.png"
-              alt=""
-              class="hero__item-img hero__item-img1"
-            />
-          </div>
-          <div data-aos="fade-left" class="hero__item">
-            <img
-              src="./images/hero__img2.png"
-              alt=""
-              class="hero__item-img hero__item-img2"
-            />
-          </div>
-          <div class="hero__item-text">
-            <span class="hero__text-span">привет!</span>
-            <h1 class="hero__text-title">на связи модное сообщество</h1>
-            <p class="hero__text-text">
-              Наша команда стилистов собрала все 20 лет опыта работы в сфере
-              моды и стиля в одном месте и мы готовы поделиться результатом.
-            </p>
-            <span class="hero__text-desc">познакомимся? </span>
-            <img
-              class="hero__text-icon"
-              loading="lazy"
-              src="./images/arrow_hero_mob.svg"
-              alt="стрелка вниз"
-            />
-          </div>
-        </div>
-      </section>
-      <section id="universal" class="universal">
-        <div class="universal__inner">
-          <div data-aos="fade-right" class="universal__item">
-            <h2 class="universal__item-title">
-              Универсальный гайд
-              <span class="universal__item-span">
-                чем полезен?
-                <img
-                  loading="lazy"
-                  class="universal__item-icon"
-                  src="./images/arrow_universal.svg"
-                  alt=""
-                />
-              </span>
-            </h2>
-            <p class="universal__item-text">
-              Наш гайд отвечает на вопросы: Как скорректировать фигуру с помощью
-              одежды? / Где купить красивые и качественные вещи на разный
-              ценник? / Что выбрать из одежды, если я плюс сайз? / Как одеваться
-              очень стильно, соблюдая правила восточной культуры?
-            </p>
-            <div class="universal__item-box">
-              <img
-                loading="lazy"
-                src="./images/universal__img1.png"
-                alt="кофта"
-                class="universal__item-box-img"
-              />
-              <img
-                loading="lazy"
-                src="./images/universal__img2.png"
-                alt="юбка"
-                class="universal__item-box-img"
-              />
-              <img
-                loading="lazy"
-                src="./images/universal__img3.png"
-                alt="туфля"
-                class="universal__item-box-img"
-              />
-              <img
-                loading="lazy"
-                src="./images/universal__img4.png"
-                alt="сумка"
-                class="universal__item-box-img"
-              />
-            </div>
-          </div>
-          <div data-aos="fade-left" class="universal__item">
-            <img
-              loading="lazy"
-              src="./images/Журнал фото.png"
-              alt="Журнал"
-              class="universal__item-img"
-            />
-            <ul class="universal__item-list">
-              <li class="universal__item-list-item">01/ Поло “Sporty&Rich”</li>
-              <li class="universal__item-list-item">01/ Поло “Sporty&Rich”</li>
-              <li class="universal__item-list-item">01/ Поло “Sporty&Rich”</li>
-              <li class="universal__item-list-item">01/ Поло “Sporty&Rich”</li>
-              <li class="universal__item-list-item">01/ Поло “Sporty&Rich”</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section id="inside" class="inside">
-        <div class="inside__inner">
-          <div class="inside__item">
-            <div class="inside__item-box">
-              <h2 data-aos="fade-down" class="inside__item-title">
-                что внутри?
-              </h2>
-              <p data-aos="fade-right" class="inside__item-text">
-                5 блоков с готовыми образами и короткими комментариями от
-                стилистов. Также бесплатный подарок от StyleScripts.
-              </p>
-            </div>
-            <span data-aos="fade-right" class="inside__item-span"
-              >смело листайте влево</span
-            >
-          </div>
-
-          <div data-aos="fade-left" class="inside__item inside__item-swiper">
-            <div class="inside__item-arrow-box">
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-            </div>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide inside__card card__flip">
-                <div class="inside__card-inner">
-                  <div class="card__front">
-                    <h3 class="card__front-title">1 / на все случаи жизни </h3>
-                    <button class="card__front-btn btn open-btn">Нажми</button>
-                  </div>
-                  <div class="card__back">
-                    <p class="card__back-text">
-                      Так, а как быть девушкам восточных культур, которые хотят
-                      выглядеть модно и при этом не нарушать устоявшиеся
-                      традиции? Где им одеваться? Наш эксперт,
-                      специализирующийся по стайлингу мусульманок, подготовил 12
-                      стильных и практичных луков со строгим соблюдением всех
-                      устоев. Ко всем образам прилагается ссылка / адрес, где
-                      можно купить вещь. 
-                    </p>
-                    <button class="btn close-btn">Вернуться</button>
-                  </div>
+        <!-- main-banner section -->
+        <section id="main" class="main-banner">
+            <div class="main-banner__inner">
+                <div class="container">
+                    <div class="main-banner__title-wrapper">
+                        <h1 class="main-banner__title">Жилой комплекс <span class="main-banner__title--colored">“пушка”</span></h1>
+                        <p class="main-banner__subtitle">Твой новый уровень комфорта и уюта.</p>
+                    </div>
+                    <a href="https://izumrudnyy-pushkin.vercel.app/" class="button">Подбор квартир</a>
                 </div>
-              </div>
-              <div class="swiper-slide inside__card card__flip">
-                <div class="inside__card-inner">
-                  <div class="card__front">
-                    <img
-                      loading="lazy"
-                      class="card__front-img"
-                      src="./images/inside__slider.png"
-                      alt="женщина"
-                    />
-                    <h3 class="card__front-title">1 / на все случаи жизни </h3>
-                    <button class="btn card__front-btn open-btn">Нажми</button>
-                  </div>
-                  <div class="card__back">
-                    <p class="card__back-text">
-                      Так, а как быть девушкам восточных культур, которые хотят
-                      выглядеть модно и при этом не нарушать устоявшиеся
-                      традиции? Где им одеваться? Наш эксперт,
-                      специализирующийся по стайлингу мусульманок, подготовил 12
-                      стильных и практичных луков со строгим соблюдением всех
-                      устоев. Ко всем образам прилагается ссылка / адрес, где
-                      можно купить вещь. 
-                    </p>
-                    <button class="btn close-btn">Вернуться</button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide inside__card card__flip">
-                <div class="inside__card-inner">
-                  <div class="card__front">
-                    <img
-                      loading="lazy"
-                      class="card__front-img"
-                      src="./images/inside__slider.png"
-                      alt="женщина"
-                    />
-                    <h3 class="card__front-title">1 / на все случаи жизни </h3>
-                    <button class="btn card__front-btn open-btn">Нажми</button>
-                  </div>
-                  <div class="card__back">
-                    <p class="card__back-text">
-                      Так, а как быть девушкам восточных культур, которые хотят
-                      выглядеть модно и при этом не нарушать устоявшиеся
-                      традиции? Где им одеваться? Наш эксперт,
-                      специализирующийся по стайлингу мусульманок, подготовил 12
-                      стильных и практичных луков со строгим соблюдением всех
-                      устоев. Ко всем образам прилагается ссылка / адрес, где
-                      можно купить вещь. 
-                    </p>
-                    <button class="btn close-btn">Вернуться</button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide inside__card card__flip">
-                <div class="inside__card-inner">
-                  <div class="card__front">
-                    <img
-                      loading="lazy"
-                      class="card__front-img"
-                      src="./images/inside__slider.png"
-                      alt="женщина"
-                    />
-                    <h3 class="card__front-title">1 / на все случаи жизни </h3>
-                    <button class="btn card__front-btn open-btn">Нажми</button>
-                  </div>
-                  <div class="card__back">
-                    <p class="card__back-text">
-                      Так, а как быть девушкам восточных культур, которые хотят
-                      выглядеть модно и при этом не нарушать устоявшиеся
-                      традиции? Где им одеваться? Наш эксперт,
-                      специализирующийся по стайлингу мусульманок, подготовил 12
-                      стильных и практичных луков со строгим соблюдением всех
-                      устоев. Ко всем образам прилагается ссылка / адрес, где
-                      можно купить вещь. 
-                    </p>
-                    <button class="btn close-btn">Вернуться</button>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="carousel" class="carousel">
-        <div class="carousel__box">
-          <img
-            loading="lazy"
-            class="carousel__box-img"
-            src="./images/arrow_carusel.svg"
-            alt=""
-          />
-          <div class="carousel__box-item">
-            <h2 data-aos="fade-right" class="carousel__box-title">
-              пару образов от нас
-            </h2>
-            <span data-aos="fade-left" class="carousel__box-text"
-              >покажем немного закулисья
-              <img
-                loading="lazy"
-                class="carousel__box-img-mobile"
-                src="./images/arrow_carusel-mob.svg"
-                alt=""
-              />
-            </span>
-          </div>
-        </div>
-        <div class="carousel__scotch">
-          <img
-            loading="lazy"
-            class="carousel__scotch-img"
-            src="./images/Скотч фото.png"
-            alt="скотч"
-          />
-        </div>
-        <div class="carousel__inner">
-          <div class="custom-swiper-container swiper-container">
-            <div class="custom-swiper-wrapper swiper-wrapper">
-              <div class="custom-swiper-slide swiper-slide">
-                <img
-                  loading="lazy"
-                  src="./images/Лук 7-Photoroom.png"
-                  alt="Изображение 1"
-                />
-              </div>
-              <div class="custom-swiper-slide swiper-slide">
-                <img
-                  loading="lazy"
-                  src="./images/Лук 7-Photoroom (1).png"
-                  alt="Изображение 2"
-                />
-              </div>
+        </section>
+        <!-- main-banner section end -->
 
-              <div class="custom-swiper-slide swiper-slide">
-                <img
-                  loading="lazy"
-                  src="./images/Лук 7-Photoroom.png"
-                  alt="Изображение 4"
-                />
-              </div>
-              <div class="custom-swiper-slide swiper-slide">
-                <img
-                  loading="lazy"
-                  src="./images/Лук 7-Photoroom (1).png"
-                  alt="Изображение 5"
-                />
-              </div>
-              <div class="custom-swiper-slide swiper-slide">
-                <img
-                  loading="lazy"
-                  src="./images/Лук 7-Photoroom.png"
-                  alt="Изображение 1"
-                />
-              </div>
-              <div class="custom-swiper-slide swiper-slide">
-                <img
-                  loading="lazy"
-                  src="./images/Лук 7-Photoroom (1).png"
-                  alt="Изображение 2"
-                />
-              </div>
+        <!-- grid-gallery section -->
+        <section id="gallery" class="grid-gallery">
+            <div class="container">
+                <div class="grid-gallery__inner">
+                    <div class="grid-gallery__item">
+                        <h3 class="grid-gallery__title">УЮТНЫЙ ЦЕНТР ГОРОДА</h3>
+                        <img class="grid-gallery__img" src="./images/gallery/Rectangle 9.jpg" alt="">
+                    </div>
+                    <div class="grid-gallery__item">
+                        <h3 class="grid-gallery__title">ПОДЗЕМНАЯ ПАРКОВКА</h3>
+                        <img class="grid-gallery__img" src="./images/gallery/Rectangle 10.jpg" alt="">
+                    </div>
 
-              <div class="custom-swiper-slide swiper-slide">
-                <img
-                  loading="lazy"
-                  src="./images/Лук 7-Photoroom.png"
-                  alt="Изображение 4"
-                />
-              </div>
-              <div class="custom-swiper-slide swiper-slide">
-                <img
-                  loading="lazy"
-                  src="./images/Лук 7-Photoroom (1).png"
-                  alt="Изображение 5"
-                />
-              </div>
-            </div>
-          </div>
-          <a href="#" class="carousel__inner-btn">Смотреть структуру гайда</a>
-        </div>
-      </section>
-      <section class="grid">
-        <div data-aos="fade-down-right" class="grid__item">
-          <h2 class="grid__item-tile">Наш гайд создан для всех</h2>
-          <span class="grid__item-span">для тебя и твоей подруги</span>
-          <img class="grid__item-arrow" src="./images/arrow_grid.svg" alt="" />
-        </div>
-        <div class="grid__item">
-          <p class="grid__item-text">
-            Для всех прекрасных девушек, кто хочет выглядеть стильно
-          </p>
-        </div>
-        <div class="grid__item">
-          <p class="grid__item-text gridText">
-            Для всех прекрасных девушек, кто хочет выглядеть стильно
-          </p>
-          <img class="grid__item-img" src="./images/grid_img1.png" alt="" />
-        </div>
-        <div class="grid__item">
-          <p class="grid__item-text">
-            Для всех прекрасных девушек, кто хочет выглядеть стильно
-          </p>
-        </div>
-        <div class="grid__item">
-          <p class="grid__item-text gridText">
-            Для всех прекрасных девушек, кто хочет выглядеть стильно
-          </p>
-          <img class="grid__item-img" src="./images/grid_img2.png" alt="" />
-        </div>
-        <div class="grid__item">
-          <p class="grid__item-text">
-            Для всех прекрасных девушек, кто хочет выглядеть стильно
-          </p>
-        </div>
-      </section>
-      <section id="price" class="price">
-        <div class="price__inner">
-          <div class="price__item">
-            <h2 data-aos="fade-down" class="price__item-box-title">Тарифы</h2>
-            <p data-aos="fade-right" class="price__item-box-text">
-              Для удобства ты можешь купить весь гайд сразу или же взять только
-              блок, который тебе интересен.
-            </p>
+                    <div class="grid-gallery__item">
+                        <h3 class="grid-gallery__title">ЗАКРЫТАЯ ТЕРРИТОРИЯ
+                            С ВИДЕОНАБЛЮДЕНИЕМ</h3>
+                        <img class="grid-gallery__img" src="./images/gallery/Rectangle 11.jpg" alt="">
+                    </div>
 
-            <span class="price__item-box-span">девочки, гуляем?</span>
-          </div>
-          <div data-aos="fade-left" class="price__item">
-            <div class="price__card">
-              <div class="price__card-box">
-                <h3 class="price__card-title">01 / Тариф “Суперчеткая”</h3>
-                <ul class="price__card-list">
-                  <li class="price__card-list-item">
-                    3 любых блока на выбор (за исключением «На все случаи
-                    жизни») 
-                  </li>
-                  <li class="price__card-list-item">
-                    3 любых блока на выбор (за исключением «На все случаи
-                    жизни») 
-                  </li>
-                </ul>
-              </div>
-              <a class="price__card-btn" href="">1499 руб.</a>
-            </div>
-            <div class="price__card">
-              <div class="price__card-box">
-                <h3 class="price__card-title">01 / Тариф “Суперчеткая”</h3>
-                <ul class="price__card-list">
-                  <li class="price__card-list-item">
-                    3 любых блока на выбор (за исключением «На все случаи
-                    жизни») 
-                  </li>
-                  <li class="price__card-list-item">
-                    3 любых блока на выбор (за исключением «На все случаи
-                    жизни») 
-                  </li>
-                </ul>
-              </div>
-              <a class="price__card-btn" href="">1499 руб.</a>
-            </div>
-            <div class="price__card">
-              <div class="price__card-box">
-                <h3 class="price__card-title">01 / Тариф “Суперчеткая”</h3>
-                <ul class="price__card-list">
-                  <li class="price__card-list-item">
-                    3 любых блока на выбор (за исключением «На все случаи
-                    жизни») 
-                  </li>
-                </ul>
-              </div>
-              <a class="price__card-btn" href="">1499 руб.</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="prize">
-        <div class="prize__inner">
-          <div data-aos="fade-down" class="prize__item">
-            <h2 class="prize__item-title">Подарок для тебя</h2>
-            <p class="prize__item-text">
-              Ссылка на закрытый модный Telegram-канал, где наши стилисты каждые
-              3 недели разбирают образы подписчиков, выкладывают полезную
-              информацию про тренды и моду, отвечают на самые популярные вопросы
-              про стиль.
-            </p>
-            <span class="prize__item-span">скорее забирай и присоединяйся</span>
-          </div>
-          <div data-aos="fade-up" class="prize__item">
-            <img
-              class="prize__item-img"
-              loading="lazy"
-              src="./images/hero__img2.png"
-              alt=""
-            />
-            <a class="prize__item-link" href="">Вступить</a>
-          </div>
-        </div>
-      </section>
-      <section id="faq" class="faq">
-        <div class="faq__inner">
-          <div data-aos="fade-right" class="faq__item">
-            <img
-              loading="lazy"
-              class="faq__item-img"
-              src="./images/faq.png"
-              alt=""
-            />
-          </div>
-          <div class="faq__item">
-            <h2 class="faq__item-title">FAQ</h2>
-            <ul data-aos="fade-left" class="accordion">
-              <li class="accordion-item">
-                <div class="accordion-header">
-                  <h3 class="accordion-header-title">
-                    Каждый из нас понимает очевидную вещь: базовый вектор
-                    развития?
-                  </h3>
 
-                  <span class="accordion-icon"></span>
+                    <div class="grid-gallery__item">
+                        <h3 class="grid-gallery__title">ДПАНОРАМНЫЙ ВИД НА ГОРОД</h3>
+                        <img class="grid-gallery__img" src="./images/gallery/Rectangle 9 (1).jpg" alt="">
+                    </div>
+
+                    <div class="grid-gallery__item">
+                        <h3 class="grid-gallery__title">ДЕТСКАЯ ПЛОЩАДКА
+                            И СПОРТИВНЫЙ КОМПЛЕКС</h3>
+                        <img class="grid-gallery__img" src="./images/gallery/Rectangle 10 (1).jpg" alt="">
+                    </div>
+                   
+                    <div class="grid-gallery__item">
+                        <h3 class="grid-gallery__title">РЯДОМ ПАРКИ
+                            И ПЕШЕХОДНЫЕ АЛЛЕИ</h3>
+                        <img class="grid-gallery__img" src="./images/gallery/Rectangle 11 (1).jpg" alt="">
+                    </div>
+                    
+                  
+                   
                 </div>
-                <p class="accordion-content">
-                  Также как повышение уровня гражданского сознания предоставляет
-                  широкие возможности для анализа существующих паттернов
-                  поведения.
+            </div>
+        </section>
+        <!-- grid-gallery section end -->
+
+         <!-- how-buy section -->
+         <section id="buy" class="how-buy">
+            <div class="container">
+                <h2 class="section__title">Как купить?</h2>
+                <div class="how-buy__inner">
+                    <div class="how-buy__folders">
+                        <div class="how-buy__folder">
+                            <div class="how-buy__folder-body">
+                                <div class="how-buy__folder-item">
+                                    <h6 class="how-buy__folder-title">Ипотека от застройщика</h6>
+                                    <p class="how-buy__folder-procent how-buy__folder-procent--yelloy">12%</p>
+                                </div>
+                                <img class="how-buy__folder-ico" src="./images/homeico.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="how-buy__folder how-buy__folder--ligth-blue">
+                            <div class="how-buy__folder-body">
+                                <div class="how-buy__folder-item">
+                                    <h6 class="how-buy__folder-title how-buy__folder-title--black">Рассрочка до</h6>
+                                    <p class="how-buy__folder-procent how-buy__folder-procent--blue">18 месяцев</p>
+                                </div>
+                                <div class="how-buy__folder-item">
+                                    <h6 class="how-buy__folder-title how-buy__folder-title--black">Первоначальный взнос</h6>
+                                    <p class="how-buy__folder-procent how-buy__folder-procent--blue">30%</p>
+                                </div>
+                                <img class="how-buy__folder-ico" src="./images/lampico.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="how-buy__conditions">
+                        <p class="how-buy__conditions-title">Приобрести квартиру можно
+                            по государственным программам</p>
+                        <div class="how-buy__conditions-wrapper">
+                            <div class="how-buy__conditions-item how-buy__conditions-item--ligth">
+                                <p class="how-buy__conditions-item-title">Семейная ипотека</p>
+                                <p class="how-buy__conditions-item-data">от 6%</p>
+                            </div>
+                            <div class="how-buy__conditions-item how-buy__conditions-item--ligth">
+                                <p class="how-buy__conditions-item-title">IT ипотека</p>
+                                <p class="how-buy__conditions-item-data">от 6%</p>
+                            </div>
+                            <div class="how-buy__conditions-item">
+                                <p class="how-buy__conditions-item-title">Военная ипотека</p>
+                                <p class="how-buy__conditions-item-data">от 16%</p>
+                            </div>
+                            <div class="how-buy__conditions-item">
+                                <p class="how-buy__conditions-item-title">Жилищные
+                                    сертификаты</p>
+                                <p class="how-buy__conditions-item-data how-buy__conditions-item-data--small">(материнский капитал
+                                    и др.)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- how-buy section end -->
+
+        <!-- partners section -->
+        <section id="partners" class="partners">
+            <div class="container">
+                <h2 class="section__title">Банки партнеры</h2>
+                <div class="partners__inner">
+                    <div class="partners__item"><img src="./images/partners/sberbank.svg" alt="sberbank"></div>
+                    <div class="partners__item"><img src="./images/partners/vtb.svg" alt="vtb"></div>
+                    <div class="partners__item"><img src="./images/partners/gazprom.svg" alt="gazprom"></div>
+                    <div class="partners__item"><img src="./images/partners/psb.svg" alt="psb"></div>
+                    <div class="partners__item"><img src="./images/partners/alfa.svg" alt="alfa"></div>
+                    <div class="partners__item"><img src="./images/partners/otkritie.svg" alt="otkritie"></div>
+                    <div class="partners__item"><img src="./images/partners/levoberej.svg" alt="levoberej"></div>
+                    <div class="partners__item"><img src="./images/partners/rosbank.svg" alt="rosbank"></div>
+                    <div class="partners__item"><img src="./images/partners/bank.svg" alt="bank"></div>
+                </div>
+            </div>
+        </section>
+        <!-- partners section end -->
+
+        <!-- feedback section -->
+        <section id="feedback"  class="feedback">
+            <div class="container">
+                <div class="feedback__inner">
+                    <h5 class="feedback__title">Не нашли нужную информацию?</h5>
+                    <p class="feedback__subtitle">Оставьте ваши контактные данные и наши менеджеры свяжутся с вами в ближайшее время</p>
+                    <form action="" class="feedback__form" data-form="feedback">
+                        <input class="feedback__form-input" type="text" placeholder="Имя">
+                        <input class="feedback__form-input" type="text" placeholder="+7(___)___-__-__">
+                        <input class="feedback__form-input" type="text" placeholder="E-mail">
+                        <button class="feedback__form-submit button">Связаться</button>
+                    </form>
+                    <div class="feedback__form-policy">
+                        Нажимая кнопку Вы даете согласие на <a href="#">обработку персональных данных</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feedback section end -->
+
+        <!-- contacts section -->
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2 class="section__title">Контакты</h2>
+                <div class="contacts__inner">
+                    <div class="contacts__item">
+                        <h5 class="contacts__item-title">Узнайте больше<br> про жилищный комплекс<br> «ПУШКА»</h5>
+                        <div class="contacts__item-body">
+                            <a class="contacts__number" href="tel:+7(912)235-17-43">+7 (912) 235-17-43</a>
+                            <a class="contacts__mail" href="mailto:arbat-nt@mail.ru">arbat-nt@mail.ru</a>
+                        </div>
+                    </div>
+                    <div class="contacts__item">
+                        <h5 class="contacts__item-title">Офисы продаж</h5>
+                        <div class="contacts__item-body">
+                            <a class="contacts__address" href="">г.каменск-уральский,<br>
+                            ул. октябрьская 41/5,
+                            офис 19</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contacts section end -->
+        <!-- copyright section -->
+        <section id="copyright" class="copyright">
+            <div class="container">
+                <p>
+                    ООО «Специализированный застройщик  «ПушкинЪ»,
+                    Сайт носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 гражданского кодекса Российской федерации. Для получения подробной информации о наличии, стоимости указанных квартир, машиномест, коммерческих помещений пожалуйста, обращайтесь к специалистам ООО «Специализированный застройщик  «ПушкинЪ», с помощью специальной формы связи или по телефону 8 (3822) 280-973.
+                    Пользуясь сайтом вы соглашаетесь с политикой конфиденциальности (эти слова активный по ссылке на документ)
                 </p>
-              </li>
-              <li class="accordion-item">
-                <div class="accordion-header">
-                  <h3 class="accordion-header-title">
-                    Каждый из нас понимает очевидную вещь: базовый вектор
-                    развития?
-                  </h3>
-
-                  <span class="accordion-icon"></span>
-                </div>
-                <p class="accordion-content">
-                  Также как повышение уровня гражданского сознания предоставляет
-                  широкие возможности для анализа существующих паттернов
-                  поведения.
-                </p>
-              </li>
-              <li class="accordion-item">
-                <div class="accordion-header">
-                  <h3 class="accordion-header-title">
-                    Каждый из нас понимает очевидную вещь: базовый вектор
-                    развития?
-                  </h3>
-
-                  <span class="accordion-icon"></span>
-                </div>
-                <p class="accordion-content">
-                  Также как повышение уровня гражданского сознания предоставляет
-                  широкие возможности для анализа существующих паттернов
-                  поведения.
-                </p>
-              </li>
-            </ul>
-            <span data-aos="fade-left" class="faq__item-span"
-              >рады помочь!</span
-            >
-          </div>
-        </div>
-      </section>
+            </div>
+        </section>
+        <!-- copyright section end -->
     </main>
-    <footer id="footer" class="footer">
-      <div class="footer__inner">
-        <div data-aos="fade-down" class="footer__item">
-          <img
-            loading="lazy"
-            class="footer__item-logo"
-            src="./images/logo_footer.svg"
-            alt=""
-          />
-        </div>
-        <div class="footer__item">
-          <div class="footer__box">
-            <ul data-aos="fade-right" class="footer__box-list">
-              <li class="footer__list-item">
-                <p class="footer__box-list-text">
-                  Если вы не нашли ответа на свой вопрос, то можете задать
-                  нам его напрямую.
-                </p>
-                <div class="footer__box-item">
-                  <a href="" class="footer__box-list-link">
-                    <img
-                      class="footer__box-list-img"
-                      src="./images/tg.svg"
-                      alt="tg"
-                    />
-                  </a>
-                  <a href="" class="footer__box-list-link">
-                    <img
-                      class="footer__box-list-img"
-                      src="./images/email.svg"
-                      alt="tg"
-                    />
-                  </a>
+    <!-- END main -->
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__logo">
+                    <img class="footer__logo-img" src="./images/logodark.png" alt="">
                 </div>
-              </li>
-              <li class="footer__list-item">
-                <p class="footer__box-list-text">
-                  Или оставьте свой E-mail, мы вам обязательно напишем.
-                </p>
-                <form class="footer__form" action="">
-                  <input
-                    placeholder="E-mail"
-                    class="footer__form-input"
-                    type="enail"
-                  />
-                  <input class="footer__form-btn" type="submit" />
-                </form>
-              </li>
-            </ul>
-            <div data-aos="fade-right" class="footer__box-list">
-              <ul class="footer__box-list-item">
-                <a class="footer__box-list-item-link">Главная</a>
-                <a class="footer__box-list-item-link">Чего ждать от гайда?</a>
-                <a class="footer__box-list-item-link">Для кого?</a>
-              </ul>
-              <ul class="footer__box-list-item">
-                <a class="footer__box-list-item-link">Тарифы</a>
-                <a class="footer__box-list-item-link">FAQ</a>
-                <a class="footer__box-list-item-link">Контакты</a>
-              </ul>
-              <ul class="footer__box-list-item">
-                <a class="footer__box-list-item-link">Telegram</a>
-                <a class="footer__box-list-item-link">Whatsapp</a>
-              </ul>
-              <ul class="footer__box-list-item">
-                <span class="footer__box-list-item-span"
-                  >начни свой стиль со Stylescripts</span
-                >
-                <p class="footer__box-list-item-text">
-                  ИП Толчева Виктория Андреевна <br />
-                  ИНН 4947282649
-                </p>
-              </ul>
+                <nav class="footer__items">
+                    <div class="footer__item">
+                        <a class="footer__item-link" href="#">Выбрать квартиру</a>
+                    </div>
+                    <div class="footer__item">
+                        <a class="footer__item-link" href="#">О комплексе</a>
+                    </div>
+                    <div class="footer__item">
+                        <a class="footer__item-link" href="#">Как купить</a>
+                    </div>
+                    <div class="footer__item">
+                        <a class="footer__item-link" href="#">Контакты</a>
+                    </div>
+                </nav>
+                <div class="footer__contacts">
+                    <a class="footer__mail" href="mailto:arbat-nt@mail.ru">arbat-nt@mail.ru</a>
+                    <a class="footer__number" href="tel:+7(912)235-17-43">+7 (912) 235-17-43</a>
+                    <button class="button button--blue">Связаться</button>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </footer>
-    <div class="privacy__policy">
-      <div class="privacy__policy-inner">
-        <p class="copyright">© 2024г. Все права защищены</p>
-        <a href="" class="privacy__policy-link">Политика конфиденциальности</a>
-      </div>
-    </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/scripts.js"></script>
-  </body>
+    <!-- END footer -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
 </html>
